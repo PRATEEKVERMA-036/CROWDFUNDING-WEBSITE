@@ -1,0 +1,493 @@
+* {
+  background-repeat: unset;
+}
+
+/* navbar */
+.style {
+  text-decoration: none;
+}
+
+.navbar-content {
+  /* position:fixed;
+    top:0px; */
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(251, 255, 7);
+  /* position: relative; */
+  position: sticky;
+  top:0px;
+  z-index:10;
+ /* width: vw; */
+ /* margin-bottom: 1vh; */
+ /* border: 10px solid red; */
+}
+
+.navbar-content img:hover{
+  cursor: pointer;
+}
+
+.logo-text {
+  text-align: center;
+  padding-top: 14px;
+  padding-right: 400px;
+  margin-right: 16%;
+  margin-left: 2%;
+
+}
+
+.link {
+  font-weight: 500;
+    font-size: 42px;
+    padding: 20px;
+    color: black;
+}
+
+.link:hover{
+  cursor:pointer;
+}
+
+/* home */
+.home-content {
+  text-align: center;
+  font-size: 52px;
+  /* margin: 102px 0px; */
+  padding: 56px;
+  height: 75vh;
+
+  background: no-repeat center/100% url("./images/home-logo.jpg");
+  /* margin-top: 15vh; */
+  /* -webkit-background-size: cover; */
+  /* background-repeat-y: no-repeat; */
+  /* -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed; */
+  /* width:24vw; */
+}
+
+/* about */
+.about-content {
+  display: flex;
+  height: 85vh;
+}
+
+.about-text {
+  width: 40vw;
+  margin: 5%;
+  height: 40vh;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about-img {
+  width: 29vw;
+  height: 85vh;
+  margin-left: 30%;
+  margin-top: -15%;
+  border: 20px solid rgb(7, 152, 255);
+}
+
+/* LOGIN PAge */
+.Login-page{
+  /* margin-top: 25vh; */
+}
+
+
+
+
+/* Campaign */
+
+.campaigns-heading {
+  background-color: rgb(255, 255, 255);
+}
+
+.campaign-content {
+  display: flex;
+  margin-top: 9%;
+  margin-left: 32%;
+}
+
+.campaign-amount-button{
+  display: flex;
+  margin-top: 12%;
+  margin-left: 32%;
+  width:90%;
+}
+
+.twocolor-campaign {
+  background-color: rgb(12, 245, 190);
+  border-bottom: 70px solid rgba(6, 180, 255, 0.966);
+  height: 35vh;
+  width: 35vw;
+  margin-bottom: 40px;
+}
+
+.campaign-firstslide {
+  margin-top: 14%;
+  margin-left: 37%;
+}
+
+.campaign-img {
+  margin-left: 2%;
+  margin-top: 5%;
+  height: 111%;
+  width: 34%;
+}
+
+.campaign-info {
+  margin:22px 7px -10px 10px;
+  width:90%;
+  height:79%;
+}
+
+.campaign-info p{
+  height:70%;
+  width:100%;
+}
+
+.campaign-amount {
+  margin-left: -87px;
+    width: 60%;
+    margin-right: -4%;
+}
+
+#campaigns button {
+  height: 44px;
+  width: 119px;
+  margin-top: 2%;
+  margin-left: 47px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.carousel-item {
+  height: 463px;
+  
+}
+
+/* .Carousel section{
+  display: flex;
+  flex-direction: row;
+} */
+
+.Carousel section h1{
+  display: inline;
+}
+
+.Carousel section button{
+float: right;
+margin-right: 5%;
+margin-top: 7px;
+}
+
+/* Footer */
+.footer {
+  background: rgb(7, 255, 198);
+  height:41vh;
+}
+
+.footer-query{
+  margin: 24px 9px 28px 38px;
+    padding: 0% 20% 1% 1%;
+    border: 5px solid #000000;
+}
+
+.footer-quote{
+  padding:4.5% 10% 1% 15%;
+}
+
+
+.footer-contact-quote{
+  display: flex;
+  flex-direction: row;
+}
+
+/* ALL Campaigns*/
+.AllCampaigns-Title{
+  text-align:center;
+  font-size:5rem;
+}
+
+.AllCampaigns-Card{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.AllCampaigns-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.AllCampaigns-amount-button{
+  display: flex;
+  margin-top: -6%;
+  margin-left: 32%;
+  width:90%;
+}
+/* CARDS */
+
+.Card-page{
+  /* margin-top: 17vh; */
+}
+
+.progress-bar {
+  margin: 20px 10px 20px 20px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-left: 1.4%;
+  width:158%;
+}
+
+.card-amount-button{
+  display: flex;
+  flex-direction: row;
+  margin-top: -30%;
+  margin-left: 1.4%;
+  width:158%; 
+}
+
+.twocolor-card {
+  background-color: rgb(12, 245, 190);
+  border-bottom: 70px solid rgba(6, 180, 255, 0.966);
+  height: 60vh;
+  width: 97vw;
+  margin-bottom: 40px;
+}
+
+.card-img {
+  margin-left: 2%;
+  margin-top: 3%;
+  height: 97%;
+  width: 25%;
+}
+
+.card-info {
+  margin: 37px 7px 230px 15px;
+  width:158% ;
+  height:85%;
+}
+
+.card-amount {
+  margin-right: 20%;
+  margin-left: 0px;
+  width:50%
+}
+
+#cards button {
+  height: 44px;
+  width: 119px;
+  margin-top: 4px;
+  margin-left: -4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin:0px 2% 0px 2%;
+}
+
+
+
+.card-donorlist{
+    margin:0 0.5% 1% 1.5%;
+}
+
+
+/* ADMIN */
+
+.AdminCard{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.AdminTwocolor-campaign{
+  background-color: rgb(12, 245, 190);
+    border-bottom: 70px solid rgba(6, 180, 255, 0.966);
+    height: 35vh;
+    width: 35.1vw;
+    margin: 40px 110px;
+}
+
+.AdminAddCampaignTitle{
+  display: inline;
+  margin:0% 42% 0% 15%;
+}
+
+.AdminAddAdminTitle{
+  display: inline;
+  margin:0% 10% 0% 2%;
+}
+
+.Adminform{
+  display: flex;
+  flex-direction: row;
+  margin: 0% 9%;
+}
+
+.AdminAddCampaignForm{
+  display: inline-block;
+}
+
+.AdminAddNewAdminForm{
+  display: inline-block;
+  
+}
+
+.AdminCampaign-content {
+  display: flex;
+  margin-top: 11%;
+  margin-left: 31%;
+}
+
+#Admincampaigns button {
+  height: 44px;
+    width: 46px;
+    margin-top: 2%;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.AdminCampaign-amount {
+  margin-left: -87px;
+    width: 70%;
+    margin-right: 6%;
+}
+
+
+
+/* Update Note*/
+.UpdateCampaign h2{
+  text-align: center;
+
+}
+
+
+
+/* .AdminAllCard{ */
+  /* display: flex; */
+
+  /* flex-wrap: wrap; */
+  /* padding:2%;
+  margin:5%; */
+/* } */
+
+/* .AllAdmin-CardContent {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 41%;
+  margin-left: 50%;
+} */
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  padding: 0 16px;
+} */
+
+header {
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+form {
+  position: relative;
+  /* z-index: -1; */
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form button {
+  position: absolute;
+  
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.adminLogout{
+  margin: 2% 46.5%;
+}
+/* ADMIN CSS END */

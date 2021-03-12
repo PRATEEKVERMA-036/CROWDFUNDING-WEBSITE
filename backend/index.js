@@ -40,29 +40,37 @@ app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
 //for build folder------------
-// app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 
-// app.get('/*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+app.get('/react', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 //----------------------------
 
-// mongoose.connect("mongodb+srv://PRATEEK_CROUDFUNDING:987654321@cluster0.z9tc5.mongodb.net/crowdfundingDB?retryWrites=true&w=majority", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-mongoose.connect("mongodb://localhost:27017/crowdfundingDB", {
+mongoose.connect("mongodb+srv://PRATEEK_CROUDFUNDING:987654321@cluster0.z9tc5.mongodb.net/crowdfundingDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
+// mongoose.connect("mongodb://localhost:27017/crowdfundingDB", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
 const cardSchema = {
-  title: String,
-  content: String,
-  amount: Number,
+  title:{
+    type:String,
+    default:""
+  },
+  content:{
+    type:String,
+    default:""
+  },
+  amount:{
+    type:Number
+  },
   donation: Number,
   buttonStatus:{
     // type:Boolean,
@@ -75,10 +83,20 @@ const cardSchema = {
   
   },
   donor:[{
-    orderid:String,//update order id when in /paynow
+    orderid:{   //update order id when in /paynow
+      type:String,
+      default:""
+    },
     donatedmoney:Number,//update in /paynow
-    status:String,//pending during /paynow and success or fail in /callback
-    id:String// update txnid when in /callback in case of successful transaction
+    status:{ //pending during /paynow and success or fail in /callback
+      type:String,
+      default:""
+    },
+
+    id:{   // update txnid when in /callback in case of successful transaction
+      type:String,
+      default:""
+    }
   }],
 };
 
@@ -170,20 +188,20 @@ app.post("/admin", function (req, res) {
 //     }
 // });
 
-app.get("/admin", function (req, res) {
+app.get("/admin", async function (req, res) {
   // console.log("data inside before find in get request")
   // console.log(docs);
-
-  Card.find({}, function (err, docs) {
-    if (err) {
-      console.log(err);
-    } else {
+try {
+ let docs=await Card.find({});
+  console.log("docsssss",docs);
       res.send(docs);
     }
-
+catch(
+  err
+){console.log(err)}
     // console.log("data inside after find in get request")
     // console.log(docs);
-  });
+
 });
 
 
@@ -581,8 +599,11 @@ app.post('/callback',async (req, res) => {
 
                 // res.send('payment success')
 
-                res.redirect('http://localhost:3000');
+                res.redirect('http://localhost:4000');
         
+
+                //For running without "build" folder use this url
+                // res.redirect('http://localhost:3000');
           
                 // Card.updateOne({title:cardIdentity.title,content:cardIdentity.content},
                 //   {$inc: {donation:_result.TXNAMOUNT},
@@ -634,7 +655,13 @@ app.post('/callback',async (req, res) => {
            
 
                 //  res.send('payment failed')
-                res.redirect('http://localhost:3000');
+                res.redirect('http://localhost:4000');
+                
+                
+                //For running without "build" folder use this url
+                // res.redirect('http://localhost:3000');
+
+
 
 
                 //  res.send(err);

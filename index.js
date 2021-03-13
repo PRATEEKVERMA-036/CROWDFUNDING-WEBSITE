@@ -52,7 +52,8 @@ app.get('/react', (req, res) => {
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://PRATEEK_CROUDFUNDING:987654321@cluster0.z9tc5.mongodb.net/crowdfundingDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+}).then(connect => console.log('connected to mongodb..'))
+.catch(e => console.log('could not connect to mongodb', e));
 
 // mongoose.connect("mongodb://localhost:27017/crowdfundingDB", {
 //   useNewUrlParser: true,

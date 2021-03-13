@@ -553,8 +553,6 @@ app.post('/callback',async (req, res) => {
 
 
 
-                // console.log("result",result,_result)
-
 
 
                 // Card.findOne({title:cardIdentity.title,content:cardIdentity.content},function(err,result){

@@ -371,8 +371,8 @@ function auth(req,res,next){
 const parseUrl = express.urlencoded({ extended: false })
 const parseJson = express.urlencoded({ extended: false })
 
-const checksum_lib = require('./Paytm/checksum')
-const config = require('./Paytm/config')
+const checksum_lib = require('./paytm/checksum')
+const config = require('./paytm/config')
 
 
 // app.get('/', (req, res) => {

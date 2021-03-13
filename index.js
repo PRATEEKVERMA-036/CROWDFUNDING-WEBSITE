@@ -372,7 +372,7 @@ const parseUrl = express.urlencoded({ extended: false })
 const parseJson = express.urlencoded({ extended: false })
 
 const checksum_lib = require('./Paytm/checksum')
-const config = require('./paytm/config')
+const config = require('./Paytm/config')
 
 
 // app.get('/', (req, res) => {

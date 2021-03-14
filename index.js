@@ -40,12 +40,12 @@ app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
 //for build folder------------
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
 
-app.get('/react', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/react', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 //----------------------------
 
@@ -404,7 +404,7 @@ console.log("payment data",req.body);
       params['ORDER_ID'] = 'TEST_' + new Date().getTime();
       params['CUST_ID'] = 'customer_001';
       params['TXN_AMOUNT'] = req.body.amount.toString();
-      params['CALLBACK_URL'] = 'http://localhost:4000/callback';
+      params['CALLBACK_URL'] = 'https://crowdfundingweb.herokuapp.com/callback';
       params['EMAIL'] = req.body.email;
       params['MOBILE_NO'] = req.body.phone.toString();
   
@@ -598,7 +598,7 @@ app.post('/callback',async (req, res) => {
 
                 // res.send('payment success')
 
-                res.redirect('http://localhost:4000');
+                res.redirect('https://crowdfundingweb.herokuapp.com');
         
 
                 //For running without "build" folder use this url
@@ -654,7 +654,7 @@ app.post('/callback',async (req, res) => {
            
 
                 //  res.send('payment failed')
-                res.redirect('http://localhost:4000');
+                res.redirect('https://crowdfundingweb.herokuapp.com');
                 
                 
                 //For running without "build" folder use this url

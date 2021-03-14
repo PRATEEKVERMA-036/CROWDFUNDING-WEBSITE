@@ -40,12 +40,12 @@ app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
 //for build folder------------
-// app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 
-// app.get('/react', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+app.get('/react', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 //----------------------------
 

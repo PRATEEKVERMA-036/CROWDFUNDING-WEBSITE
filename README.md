@@ -4,6 +4,14 @@
 Crowdfunding website is a platform where people can look around different campaigns running for various causes and can support them by donating small amount of money.The donation is done through PayTM gateway
 and complete transparency of donation and privacy of donor is ensured.
 
+## Short tech summary
+
+* Implemented **authentication,authorization using Json Web Token** for admin **login**,along with **CRUD** features
+* Integrated **payment gateway by PayTM API** to collect donation and display transaction status.
+* Implemented **MongoDB query** to **encrypt transaction IDs**, in order to maintain privacy of donor
+* Technology used:**React, Node.js, Express.js, MongoDB**
+
+
 ## Features🌟 
 
 ### User features
